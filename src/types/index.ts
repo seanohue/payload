@@ -24,6 +24,7 @@ export type WhereField = {
 
 export type Where = {
   [key: string]: WhereField | Where[];
+} & {
   or?: Where[];
   and?: Where[];
 };
