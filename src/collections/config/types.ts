@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import 'mongoose-paginate-v2'; // Needed for PaginateModel namespace
 import { DeepRequired } from 'ts-essentials';
 import { Model, PaginateModel, AggregatePaginateModel } from 'mongoose';
 import { GraphQLInputObjectType, GraphQLNonNull, GraphQLObjectType } from 'graphql';
