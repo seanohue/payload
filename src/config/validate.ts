@@ -77,11 +77,15 @@ const validateSchema = async (config: SanitizedConfig, logger: Logger): Promise<
 
     let i = 0;
     if (result.error) {
+      // eslint-disable-next-line no-console
+      console.log(result.error.details);
       result.error.details.forEach(({ message }) => {
         i += 1;
         logger.error(`${i}: ${message}`);
       });
     }
+    // eslint-disable-next-line no-console
+    console.log(nestedErrors);
     nestedErrors.forEach((message) => {
       i += 1;
       logger.error(`${i}: ${message}`);
